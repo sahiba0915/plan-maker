@@ -39,6 +39,7 @@ class App extends Component {
           <div className='col-sm-6 mx-auto text-black shadow-lg p-3'>
             <h1 className='text-center'>Today's Plan</h1>
 
+      <div className='container-fluid'>
           {/* Row-2 */}
           <div className='row'>
             <div className='col-9'>
@@ -48,8 +49,9 @@ class App extends Component {
             <div className='col-2'>
               <button className='btn btn-success px-5 font-weight-bold' onClick={this.handleClick}>Add</button>
             </div>
+            </div>
 
-            <div className='conatiner-fluid'>
+            <div className='container'>
               <ul className='list-unstyled row m-5'>
               {
                 this.state.items.map((value, i)=> {

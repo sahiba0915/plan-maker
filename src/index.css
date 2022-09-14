@@ -1,2 +1,27 @@
+:root{
+    --primary-color: #D8F1A0;
+    --secondary-color: #00A878;
+    --color: #ffffff;
+}
+
+html{
+    background-color: var(--primary-color);
+}
+
+.container-fluid{
+    background-color: var(--primary-color);
+}
+
+input[type='text']{
+    background: transparent;
+}
+
+input[type='text']:focus{
+    background: transparent;
+}
+
+button.btn{
+    color: var(--color);
+}
 
 

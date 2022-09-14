@@ -15,6 +15,16 @@ class App extends Component {
 
   }
 
+  handleDelete = id => {
+    console.log("Deleted", id);
+    const oldItems = [...this.state.items];
+    const items = oldItems.filter((element, i) => {
+      return i !== id
+    })
+    this.setState({items:items});
+
+  }
+
   handleClick = e => {
     if(this.state.text !== " "){
         const items = [...this.state.items, this.state.text];
@@ -43,20 +53,14 @@ class App extends Component {
               <ul className='list-unstyled row m-5'>
               {
                 this.state.items.map((value, i)=> {
-                  return <Plan key={i} value={value} />
+                  return <Plan key={i} id ={i} value={value} sendData={this.handleDelete} />
                 })
               }
               </ul>
-
             </div>
-
           </div>
           </div>
         </div>
-
-        
-        
-
       </div>
     )
   }

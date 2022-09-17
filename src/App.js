@@ -4,7 +4,15 @@ import Header from './Components/header';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 function App(){
-  return <div><Header /></div>
+  return (
+  <div className='container'>
+    <div className='app-wrapper'>
+      <div>
+    <Header />
+    </div>
+    </div>
+    </div>
+    )
 }
 
 

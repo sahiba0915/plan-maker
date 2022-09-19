@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from './Components/header';
 import Form from './Components/form';
+import Plan from './Components/plan';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 
@@ -15,6 +16,7 @@ const App= () => {
       <div>
     <Header />
     </div>
+
     <div>
     <Form 
     input = {input}
@@ -22,6 +24,10 @@ const App= () => {
     plan = {plan}
     setPlan = {setPlan}
     />
+    </div>
+
+    <div>
+      <Plan plan={plan} setPlan={setPlan}/>
     </div>
     </div>
     </div>

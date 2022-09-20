@@ -15,7 +15,7 @@ const Form = ({input, setInput, plan, setPlan}) => {
 
   return (
     <form onSubmit={formSubmit}>
-        <input type="text" placeholder='Enter your plan' className='text-input' value = {input} required onChange={inputHandler}/>
+        <input type="text" placeholder='Enter your plan' className='task-input' value = {input} required onChange={inputHandler}/>
         <button className='btn-add' type='submit'>Add</button>
     </form>
   )

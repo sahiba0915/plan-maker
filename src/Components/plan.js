@@ -1,6 +1,12 @@
 import React from 'react';
 
 const Plan = ({plan, setPlan}) => {
+
+  const handleDelete = ({id}) => {
+    setPlan(plan.filter((todo) => todo.id !== id))
+  }
+
+  
   return (
     <div>
         {plan.map((plan)=>(
@@ -16,7 +22,7 @@ const Plan = ({plan, setPlan}) => {
             <i className='fa fa-edit'></i>
           </button>
 
-          <button className='btn-delete task-button'>
+          <button className='btn-delete task-button' onClick={()=>handleDelete(plan)}>
             <i className='fa fa-trash'></i>
           </button>
            </div>
